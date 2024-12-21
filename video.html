@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to My Website!</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap');
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url('back5.gif') 
+        no-repeat center center fixed; 
+            background-size: cover;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center; 
+        }
+
+        .intro {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 1s forwards;
+            animation-delay: 0.5s;
+        }
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-family: 'Dancing Script', cursive;
+            color: #ff80aa;
+            margin-bottom: 20px;
+            animation: moveText 3s infinite alternate;
+        }
+
+        @keyframes moveText {
+            0% { transform: translateY(0); }
+            100% { transform: translateY(-10px); }
+        }
+
+        h2 {
+            font-size: 2rem;
+            color: #d14789;
+            margin: 20px 0;
+            opacity: 0;
+            transform: translateY(-20px);
+        text-align: center;
+            animation: fadeInDown 0.8s forwards;
+        }
+
+        @keyframes fadeInDown {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            color: #555;
+            opacity: 0;
+            transform: translateY(20px);
+        text-align: center;
+            animation: fadeInUp 1s forwards;
+        }
+
+        .btn {
+            background: #ff80aa;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1.2rem;
+            transition: background 0.3s ease, transform 0.3s ease;
+        }
+
+        .btn:hover {
+            background: #d14789;
+            transform: scale(1.05);
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: rgba(255, 128, 170, 0.8);
+            padding: 10px 0;
+            margin: 0; 
+            width: 100%; 
+        }
+
+        nav a {
+            color: white;
+            margin: 0 20px; 
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.2rem;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: yellow;
+        }
+
+        section {
+            padding: 20px;
+            margin: 20px auto;
+            max-width: 1000px;
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 1s forwards;
+            text-align: left; 
+        }
+
+        .section-title {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+            color: #d14789;
+            text-align: left; 
+            font-family: 'Dancing Script', cursive;
+        }
+
+        .section-title::after {
+            content: "";
+            width: 60px;
+            height: 4px;
+            background: #ff80aa;
+            display: block;
+            margin: 10px 0; 
+            border-radius: 2px;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        ul li {
+            background: #ffe6f0;
+            margin: 5px 0;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        ul li:hover {
+            background: #ffccd5;
+        }
+
+        .pink-box {
+            background: #ff80aa;
+            padding: 15px;
+            border-radius: 10px;
+            color: black;
+            margin-bottom: 20px;
+        }
+
+        footer {
+            background: #ff80aa;
+            color: black;
+            padding: 10px 0;
+            font-size: 1rem;
+            width: 100%; 
+            text-align: center; 
+            margin-top: auto; 
+        }
+
+        video {
+	    display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 2px;
+            width: 300px;
+            height: 300px;
+        }
+    </style>
+    </style>
+</head>
+<body>
+    <nav>
+	<a href="home.html">HOME</a>
+        <a href="biodata.html">BIODATA</a>
+        <a href="experience.html">EXPERIENCE</a>
+        <a href="education.html">EDUCATION</a>
+        <a href="family.html">FAMILY</a>
+        <a href="gallery.html">GALLERY</a>
+        <a href="video.html">VIDEO</a>
+        <a href="contactme.html">CONTACT ME</a>
+        <a href="contactform.html">CONTACT FORM</a>
+    </nav>
+
+    <section id="VIDEO">
+        <h2 class="section-title">VIDEO</h2>
+        <div class="intro">
+            <video controls>
+                <source src="video2.mp4" type="video/mp4"> 
+            </video>
+
+            <video controls>
+                <source src="video1.mp4" type="video/mp4"> 
+            </video>
+        </div>
+    </section>
+
+    <footer>
+        &copy; 2024 Bella's Website. All rights reserved.
+    </footer>
+</body>
+</html>
